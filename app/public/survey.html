@@ -126,7 +126,6 @@
             $.each($(".form-control option:selected"), function () {
                 choices.push($(this).val());
             });
-            console.log(choices);
 
             var newUser = {
                 name: $("#name").val().trim(),
@@ -136,6 +135,9 @@
             $.post("/api/friends", newUser)
                 .then(function (data) {
                     console.log(data);
+                    console.log("Name", data.name);
+                    console.log("Photo", data.photo);
+                    console.log("Choices", data.choices);
                     alert("Recording your response...");
                 });
         }
