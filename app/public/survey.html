@@ -140,7 +140,7 @@
                 <div class="modal-body">
                     <p id="matchName"></p>
                     <img alt="matchPic" id="matchPhoto" height= "200px" width= "250px">
-                    <img alt="userPic" id="matchPhoto" height= "200px" width= "250px">
+                    <img alt="userPic" id="userPhoto" height= "200px" width= "250px">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -167,7 +167,7 @@
                 .then(function (data) {
                     var src1 = `${data.photo}`;
                     var src2 = `${newUser.photo}`
-                    $("#matchName").text(data.name + "and" + newUser.name + "sitting in a tree...");
+                    $("#matchName").text(data.name + " and " + newUser.name + " sitting in a tree...");
                     $("#matchPhoto").attr("src", src1);
                     $("#userPhoto").attr("src", src2);
                     $('#myModal').modal('show');
